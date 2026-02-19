@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Section 03 - The Gap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  
+  :root {
+    --bg-dark: #0e0e0e;
+    --bg-darker: #161616;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --brand-blue: #0050a5;
+    --accent-red: #d32f2f;
+  }
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* ─── SECTION 03: THE GAP ─── */
+  .beu-section-03 {
+    background: var(--bg-dark);
+    padding: 120px 24px;
+    position: relative;
+  }
+  
+  .beu-section-03-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  /* Section Header */
+  .beu-section-header {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+  
+  .beu-section-eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--brand-blue);
+    margin-bottom: 16px;
+  }
+  
+  .beu-section-headline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3rem, 8vw, 5rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+  
+  .beu-section-subhead {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    line-height: 1.5;
+    color: var(--text-secondary);
+    font-style: italic;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Options Grid */
+  .beu-options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    margin-bottom: 64px;
+  }
+  
+  .beu-option-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 40px 32px;
+    position: relative;
+  }
+  
+  .beu-option-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--accent-red);
+  }
+  
+  .beu-option-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    color: var(--accent-red);
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+  
+  .beu-option-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    color: var(--text-primary);
+  }
+  
+  .beu-option-desc {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+  }
+  
+  .beu-option-verdict {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent-red);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  
+  /* The Question */
+  .beu-the-question {
+    background: rgba(0,80,165,0.08);
+    border: 1px solid rgba(0,80,165,0.2);
+    border-left: 4px solid var(--brand-blue);
+    padding: 48px;
+    margin: 64px auto;
+    max-width: 900px;
+    text-align: center;
+  }
+  
+  .beu-question-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--brand-blue);
+    margin-bottom: 20px;
+  }
+  
+  .beu-question-text {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    line-height: 1.3;
+    font-style: italic;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+  }
+  
+  .beu-question-answer {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1;
+    color: var(--brand-blue);
+    margin-bottom: 16px;
+  }
+  
+  .beu-question-clarification {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+  }
+  
+  .beu-question-clarification strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+  
+  /* Transition Statement */
+  .beu-transition {
+    text-align: center;
+    margin-top: 64px;
+    padding: 48px 24px;
+  }
+  
+  .beu-transition-text {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    line-height: 1.5;
+    color: var(--text-secondary);
+    font-style: italic;
+    max-width: 800px;
+    margin: 0 auto 24px;
+  }
+  
+  .beu-transition-emphasis {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+    color: var(--text-primary);
+  }
+  
+  .beu-transition-emphasis span {
+    color: var(--brand-blue);
+  }
+  
+  /* Responsive */
+  @media (max-width:768px) {
+    .beu-section-03 {
+      padding: 80px 20px;
+    }
+    
+    .beu-section-header {
+      margin-bottom: 48px;
+    }
+    
+    .beu-options-grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    
+    .beu-option-card {
+      padding: 32px 24px;
+    }
+    
+    .beu-the-question {
+      padding: 32px 24px;
+      margin: 48px auto;
+    }
+    
+    .beu-transition {
+      margin-top: 48px;
+      padding: 32px 20px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- SECTION 03: THE GAP -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<section class="beu-section-03" id="options">
+  <div class="beu-section-03-container">
+    
+    <!-- Section Header -->
+    <div class="beu-section-header">
+      <div class="beu-section-eyebrow">The Problem With Current Advice</div>
+      <h2 class="beu-section-headline">So What Are Your Options?</h2>
+      <p class="beu-section-subhead">
+        Let's agree on something: the problem is real. The passive approach — keep your head down, do good work, hope someone notices — is no longer a strategy. It's a risk. So what can you actually do about it?
+      </p>
+    </div>
+    
+    <!-- Options Grid -->
+    <div class="beu-options-grid">
+      
+      <!-- Option 1 -->
+      <div class="beu-option-card">
+        <div class="beu-option-number">Option 1</div>
+        <h3 class="beu-option-title">Learn to Prompt AI</h3>
+        <p class="beu-option-desc">
+          The prevailing wisdom says if you can master prompting — if you can talk to a chatbot better than everyone else — you'll be indispensable. Build your career on knowing the right prompt engineering techniques.
+        </p>
+        <div class="beu-option-verdict">Verdict: Race to the Bottom</div>
+      </div>
+      
+      <!-- Option 2 -->
+      <div class="beu-option-card">
+        <div class="beu-option-number">Option 2</div>
+        <h3 class="beu-option-title">Go to Med School, Law School, or Trade School</h3>
+        <p class="beu-option-desc">
+          The advice is analytically sound: get into licensed professions (doctors, lawyers, engineers) or skilled trades (electricians, plumbers). These fields have regulatory moats and physical presence requirements that AI can't touch.
+        </p>
+        <div class="beu-option-verdict">Verdict: Analytically Sound, Practically Useless</div>
+      </div>
+      
+    </div>
+    
+    <!-- Why These Fail -->
+    <div class="beu-option-card" style="border-left: 3px solid var(--accent-red); margin-bottom: 64px;">
+      <div class="beu-option-title" style="color: var(--accent-red); margin-bottom: 24px;">Why Both of These Fail</div>
+      <p class="beu-option-desc" style="margin-bottom: 16px;">
+        <strong style="color: var(--text-primary);">"Learn to prompt AI"</strong> is a race to the bottom. Prompting ability becomes less valuable with every model improvement because the models get better at understanding imprecise instructions. Building a career on prompting skill is building on sand.
+      </p>
+      <p class="beu-option-desc">
+        <strong style="color: var(--text-primary);">"Go into trades, medicine, or law"</strong> is analytically correct but practically impossible for most people who need help right now. A 42-year-old marketing manager cannot go to medical school. A laid-off project coordinator cannot spend three years getting a law degree. The advice that sounds smart at a dinner party helps nobody at their kitchen table at 2 AM wondering how they will pay their mortgage.
+      </p>
+    </div>
+    
+    <!-- The Real Question -->
+    <div class="beu-the-question">
+      <div class="beu-question-label">The Real Question</div>
+      <p class="beu-question-text">
+        "What skills can I stack onto who I already am that make me harder to replace?"
+      </p>
+      <div class="beu-question-answer">Sales Skills</div>
+      <p class="beu-question-clarification">
+        Not because everyone should become a salesperson. But because the underlying skills of professional selling — <strong>building trust, diagnosing problems, navigating complex decisions, reading people, holding accountability</strong> — are the exact capabilities that sit squarely in the "hardest to replace" category.
+      </p>
+    </div>
+    
+    <!-- Transition -->
+    <div class="beu-transition">
+      <p class="beu-transition-text">
+        And unlike becoming a doctor, lawyer, or licensed engineer, learning to sell does not require years of schooling, a professional license, or starting your career over.
+      </p>
+      <div class="beu-transition-emphasis">
+        It is the most accessible, high-value skill that creates <span>AI-resistant career durability.</span>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+</body>
+</html>

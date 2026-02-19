@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Section 09 - Footer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  
+  :root {
+    --bg-dark: #0e0e0e;
+    --bg-darker: #161616;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --brand-blue: #0050a5;
+    --accent-red: #d32f2f;
+  }
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* ─── SECTION 09: FOOTER ─── */
+  .beu-footer {
+    background: var(--bg-dark);
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 80px 24px 40px;
+  }
+  
+  .beu-footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Footer Grid */
+  .beu-footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 64px;
+    margin-bottom: 64px;
+  }
+  
+  /* Brand Column */
+  .beu-footer-brand {
+    max-width: 350px;
+  }
+  
+  .beu-footer-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+  }
+  
+  .beu-footer-tagline {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: 24px;
+  }
+  
+  .beu-footer-description {
+    font-size: 0.85rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+  }
+  
+  /* Footer Links */
+  .beu-footer-column {
+  }
+  
+  .beu-footer-column-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--brand-blue);
+    margin-bottom: 20px;
+  }
+  
+  .beu-footer-links {
+    list-style: none;
+  }
+  
+  .beu-footer-link {
+    margin-bottom: 12px;
+  }
+  
+  .beu-footer-link a {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .beu-footer-link a:hover {
+    color: var(--text-primary);
+  }
+  
+  /* Footer Bottom */
+  .beu-footer-bottom {
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .beu-footer-copyright {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+  }
+  
+  .beu-footer-legal {
+    display: flex;
+    gap: 24px;
+  }
+  
+  .beu-footer-legal a {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .beu-footer-legal a:hover {
+    color: var(--text-primary);
+  }
+  
+  /* Responsive */
+  @media (max-width:992px) {
+    .beu-footer-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+    }
+    
+    .beu-footer-brand {
+      grid-column: 1 / -1;
+    }
+  }
+  
+  @media (max-width:768px) {
+    .beu-footer {
+      padding: 60px 20px 32px;
+    }
+    
+    .beu-footer-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    
+    .beu-footer-bottom {
+      flex-direction: column;
+      text-align: center;
+      gap: 16px;
+    }
+    
+    .beu-footer-legal {
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- SECTION 09: FOOTER -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<footer class="beu-footer">
+  <div class="beu-footer-container">
+    
+    <!-- Footer Grid -->
+    <div class="beu-footer-grid">
+      
+      <!-- Brand Column -->
+      <div class="beu-footer-brand">
+        <div class="beu-footer-logo">BE UNAVOIDABLE</div>
+        <div class="beu-footer-tagline">The Realistic Answer to AI Displacement</div>
+        <p class="beu-footer-description">
+          We're not teaching you to sell products. We're teaching you to sell the most valuable thing you own: you.
+        </p>
+      </div>
+      
+      <!-- Platform Column -->
+      <div class="beu-footer-column">
+        <div class="beu-footer-column-title">Platform</div>
+        <ul class="beu-footer-links">
+          <li class="beu-footer-link"><a href="#how-it-works">How It Works</a></li>
+          <li class="beu-footer-link"><a href="#modules">Training Modules</a></li>
+          <li class="beu-footer-link"><a href="#solution">Lane 1 vs Lane 2</a></li>
+          <li class="beu-footer-link"><a href="#get-started">Get Started</a></li>
+        </ul>
+      </div>
+      
+      <!-- Company Column -->
+      <div class="beu-footer-column">
+        <div class="beu-footer-column-title">Company</div>
+        <ul class="beu-footer-links">
+          <li class="beu-footer-link"><a href="#">About</a></li>
+          <li class="beu-footer-link"><a href="#">Contact</a></li>
+          <li class="beu-footer-link"><a href="#">Support</a></li>
+        </ul>
+      </div>
+      
+      <!-- Legal Column -->
+      <div class="beu-footer-column">
+        <div class="beu-footer-column-title">Legal</div>
+        <ul class="beu-footer-links">
+          <li class="beu-footer-link"><a href="#">Privacy Policy</a></li>
+          <li class="beu-footer-link"><a href="#">Terms of Service</a></li>
+          <li class="beu-footer-link"><a href="#">Disclaimer</a></li>
+        </ul>
+      </div>
+      
+    </div>
+    
+    <!-- Footer Bottom -->
+    <div class="beu-footer-bottom">
+      <div class="beu-footer-copyright">
+        © 2026 Be Unavoidable. All rights reserved.
+      </div>
+      <div class="beu-footer-legal">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Disclaimer</a>
+      </div>
+    </div>
+    
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Section 07 - Who This Is For</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  
+  :root {
+    --bg-dark: #0e0e0e;
+    --bg-darker: #161616;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --brand-blue: #0050a5;
+    --accent-red: #d32f2f;
+  }
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* ─── SECTION 07: WHO THIS IS FOR ─── */
+  .beu-section-07 {
+    background: var(--bg-dark);
+    padding: 120px 24px;
+    position: relative;
+  }
+  
+  .beu-section-07-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  /* Section Header */
+  .beu-section-header {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+  
+  .beu-section-eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--brand-blue);
+    margin-bottom: 16px;
+  }
+  
+  .beu-section-headline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3rem, 8vw, 5rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+  
+  .beu-section-subhead {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    line-height: 1.5;
+    color: var(--text-secondary);
+    font-style: italic;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Two Column Layout */
+  .beu-qualification-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 48px;
+    margin-bottom: 64px;
+  }
+  
+  /* Good Fit Card */
+  .beu-fit-card {
+    background: rgba(0,80,165,0.08);
+    border: 1px solid rgba(0,80,165,0.2);
+    border-left: 4px solid var(--brand-blue);
+    padding: 48px 40px;
+  }
+  
+  .beu-fit-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    line-height: 1;
+    margin-bottom: 24px;
+    color: var(--brand-blue);
+  }
+  
+  .beu-fit-list {
+    list-style: none;
+  }
+  
+  .beu-fit-item {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    padding: 16px 0;
+    padding-left: 32px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    position: relative;
+  }
+  
+  .beu-fit-item:last-child {
+    border-bottom: none;
+  }
+  
+  .beu-fit-item::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 16px;
+    color: var(--brand-blue);
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  /* Not a Fit Card */
+  .beu-not-fit-card {
+    background: rgba(211,47,47,0.08);
+    border: 1px solid rgba(211,47,47,0.2);
+    border-left: 4px solid var(--accent-red);
+    padding: 48px 40px;
+  }
+  
+  .beu-not-fit-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    line-height: 1;
+    margin-bottom: 24px;
+    color: var(--accent-red);
+  }
+  
+  .beu-not-fit-item {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    padding: 16px 0;
+    padding-left: 32px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    position: relative;
+  }
+  
+  .beu-not-fit-item:last-child {
+    border-bottom: none;
+  }
+  
+  .beu-not-fit-item::before {
+    content: '✗';
+    position: absolute;
+    left: 0;
+    top: 16px;
+    color: var(--accent-red);
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  /* Honesty Statement */
+  .beu-honesty-statement {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-left: 3px solid var(--brand-blue);
+    padding: 48px;
+    margin: 64px auto 0;
+    max-width: 900px;
+    text-align: center;
+  }
+  
+  .beu-honesty-text {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    line-height: 1.5;
+    font-style: italic;
+    color: var(--text-primary);
+  }
+  
+  .beu-honesty-text strong {
+    color: var(--brand-blue);
+    font-style: normal;
+  }
+  
+  /* Responsive */
+  @media (max-width:768px) {
+    .beu-section-07 {
+      padding: 80px 20px;
+    }
+    
+    .beu-section-header {
+      margin-bottom: 48px;
+    }
+    
+    .beu-qualification-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    
+    .beu-fit-card,
+    .beu-not-fit-card {
+      padding: 32px 24px;
+    }
+    
+    .beu-honesty-statement {
+      padding: 32px 24px;
+      margin-top: 48px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- SECTION 07: WHO THIS IS FOR -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<section class="beu-section-07" id="who-this-is-for">
+  <div class="beu-section-07-container">
+    
+    <!-- Section Header -->
+    <div class="beu-section-header">
+      <div class="beu-section-eyebrow">Honest Qualification</div>
+      <h2 class="beu-section-headline">This Isn't For Everyone</h2>
+      <p class="beu-section-subhead">
+        We'd be the first to tell you if this isn't the right fit. That counterintuitive honesty is classic good selling.
+      </p>
+    </div>
+    
+    <!-- Qualification Grid -->
+    <div class="beu-qualification-grid">
+      
+      <!-- Good Fit -->
+      <div class="beu-fit-card">
+        <h3 class="beu-fit-title">You're a Good Fit If:</h3>
+        <ul class="beu-fit-list">
+          <li class="beu-fit-item">You've been displaced by AI or fear imminent job loss</li>
+          <li class="beu-fit-item">You can't afford 5 years of school or don't want to start your career over</li>
+          <li class="beu-fit-item">You're willing to learn skills that feel uncomfortable at first</li>
+          <li class="beu-fit-item">You recognize the passive approach ("do good work and hope someone notices") is now a risk</li>
+          <li class="beu-fit-item">You want a clear, actionable path forward — not motivational content</li>
+        </ul>
+      </div>
+      
+      <!-- Not a Fit -->
+      <div class="beu-not-fit-card">
+        <h3 class="beu-not-fit-title">You're Not a Good Fit If:</h3>
+        <ul class="beu-fit-list">
+          <li class="beu-not-fit-item">You're looking for motivational content or inspirational speeches</li>
+          <li class="beu-not-fit-item">You think your job is safe because you "do good work"</li>
+          <li class="beu-not-fit-item">You want to learn to prompt AI better</li>
+          <li class="beu-not-fit-item">You're not willing to practice selling yourself</li>
+          <li class="beu-not-fit-item">You believe sales skills are manipulative or beneath you</li>
+        </ul>
+      </div>
+      
+    </div>
+    
+    <!-- Honesty Statement -->
+    <div class="beu-honesty-statement">
+      <p class="beu-honesty-text">
+        That counterintuitive honesty — <strong>qualifying the buyer</strong> — is classic good selling. It increases trust with the people it's for, because they feel guided rather than pitched.
+      </p>
+    </div>
+    
+  </div>
+</section>
+
+</body>
+</html>
